@@ -20,7 +20,7 @@ CACHEDIR.TAG  debug
 bubble-shell  bubble-shell.d  build  deps  examples  incremental
 > cd scripts/
 No such file or directory (os error 2)
-> cd ../../src
+> cd ../../src/
 > ls
 main.rs
 > exit
