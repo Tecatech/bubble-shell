@@ -3,7 +3,7 @@
 ```
 $ cd bubble-shell/
 $ ls
-Cargo.lock  Cargo.toml  README.md  src
+Cargo.toml  README.md  src
 $ cargo build
    Compiling bubble-shell v0.1.0 (/mnt/c/Users/Admin/bubble-shell)
     Finished dev [unoptimized + debuginfo] target(s) in 1.05s
