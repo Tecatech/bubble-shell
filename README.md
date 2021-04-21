@@ -1,2 +1,1 @@
-# bubble-shell
-Custom shell implementation
+# Custom shell implementation
