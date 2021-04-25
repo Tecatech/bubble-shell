@@ -7,12 +7,12 @@ fn main() {
     loop {
         print!("> ");
         stdout().flush().unwrap();
-
+        
         let mut input = String::new();
         stdin().read_line(&mut input).unwrap();
         let mut commands = input.trim().split(" | ").peekable();
         let mut previous_command = None;
-
+        
         while let Some(command) = commands.next() {
             let mut parts = command.trim().split_whitespace();
             let command = parts.next().unwrap();
@@ -24,7 +24,7 @@ fn main() {
                     if let Err(e) = env::set_current_dir(&root) {
                         eprintln!("{}", e);
                     }
-
+                    
                     previous_command = None;
                 }
                 "exit" => return,
@@ -35,7 +35,7 @@ fn main() {
                     } else {
                         Stdio::inherit()
                     };
-
+                    
                     let output = Command::new(command).args(args).stdin(stdin).stdout(stdout).spawn();
                     match output {
                         Ok(output) => { previous_command = Some(output); }
@@ -47,7 +47,7 @@ fn main() {
                 }
             }
         }
-
+        
         if let Some(mut final_command) = previous_command {
             final_command.wait().unwrap();
         }
