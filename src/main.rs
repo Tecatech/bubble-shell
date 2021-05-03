@@ -29,7 +29,7 @@ fn main() {
                 }
                 "exit" => return,
                 command => {
-                    let stdin = previous_command.map_or(Stdio::inherit(), |output: Child| Stdio::from(output.stdout.unwrap()));
+                    let stdin = previous_command.map_or(Stdio::inherit(), | output: Child | Stdio::from(output.stdout.unwrap()));
                     let stdout = if commands.peek().is_some() {
                         Stdio::piped()
                     } else {
