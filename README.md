@@ -1,4 +1,4 @@
-# Custom shell implementation
+# Custom unix shell
 
 ```
 $ cd bubble-shell/
